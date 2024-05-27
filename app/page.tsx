@@ -5,7 +5,10 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Story time',
+      action: 'tx',
+      label: 'Approve',
+      target: `${NEXT_PUBLIC_URL}/api/approve`,
+      postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
     },
     {
       action: 'tx',
@@ -19,8 +22,9 @@ const frameMetadata = getFrameMetadata({
     aspectRatio: '1:1',
   },
   input: {
-    text: 'Tell me a story',
+    text: 'ETH/USDC',
   },
+
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
